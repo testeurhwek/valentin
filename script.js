@@ -9,5 +9,6 @@ noBtn.addEventListener("mouseover", () => {
 });
 
 yesBtn.addEventListener("click", () => {
-    message.textContent = "Yaaaay 💕 I knew it! 💍💖";
+    message.textContent = "Yaaaay 💕 I knew it💖";
+
 });
