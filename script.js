@@ -1,23 +1,24 @@
-const form = document.getElementById("memoryForm");
-const formSection = document.getElementById("formSection");
+const placeSelect = document.getElementById("placeSelect");
+const continueBtn = document.getElementById("continueBtn");
+const placeSection = document.getElementById("placeSection");
 const valentineSection = document.getElementById("valentineSection");
+const placeMessage = document.getElementById("placeMessage");
 
-const noBtn = document.getElementById("noBtn");
 const yesBtn = document.getElementById("yesBtn");
+const noBtn = document.getElementById("noBtn");
 const message = document.getElementById("message");
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
+continueBtn.addEventListener("click", () => {
+    const place = placeSelect.value;
 
-    const date = document.getElementById("meetDate").value;
-    const place = document.getElementById("meetPlace").value;
-
-    if (!date || !place) return;
-
-    formSection.classList.add("hidden");
-    valentineSection.classList.remove("hidden");
-
-    message.textContent = `💕 Since ${date}, at ${place}...`;
+    if (place === "gammarth") {
+        placeSection.classList.add("hidden");
+        valentineSection.classList.remove("hidden");
+    } else if (place === "") {
+        placeMessage.textContent = "👀 Choose a place first";
+    } else {
+        placeMessage.textContent = "😏 Hmm… that’s not the right one. Try again.";
+    }
 });
 
 noBtn.addEventListener("mouseover", () => {
@@ -27,6 +28,7 @@ noBtn.addEventListener("mouseover", () => {
 });
 
 yesBtn.addEventListener("click", () => {
-    message.textContent = "💍 You just made me the happiest person 💖";
+    message.textContent = "💍 Best choice ever 💖";
 });
+
 
