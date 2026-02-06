@@ -21,8 +21,8 @@ const travelMessage = document.getElementById("travelMessage");
 // STEP 1 → STEP 2
 continueBtn.addEventListener("click", () => {
     if (placeSelect.value === "gammarth") {
-        placeSection.classList.add("hidden");
-        valentineSection.classList.remove("hidden");
+        placeSection.style.display = "none";
+        valentineSection.style.display = "block";
     } else if (placeSelect.value === "") {
         placeMessage.textContent = "👀 Choose a place first";
     } else {
@@ -39,18 +39,17 @@ noBtn.addEventListener("mouseover", () => {
 
 // STEP 2 → STEP 3
 yesBtn.addEventListener("click", () => {
-    valentineSection.classList.add("hidden");
-    travelSection.classList.remove("hidden");
+    valentineSection.style.display = "none";
+    travelSection.style.display = "block";
 });
 
 // STEP 3 → STEP 4
 travelButtons.forEach(btn => {
     btn.addEventListener("click", () => {
         travelMessage.textContent = `💖 Perfect! ${btn.textContent} it is ✨`;
-        // Après 1 seconde → afficher final
         setTimeout(() => {
-            travelSection.classList.add("hidden");
-            finalSection.classList.remove("hidden");
+            travelSection.style.display = "none";
+            finalSection.style.display = "block";
         }, 1000);
     });
 });
