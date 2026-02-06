@@ -19,49 +19,13 @@ body {
     border-radius: 20px;
     text-align: center;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 400px;
 }
 
 h1 {
     color: #ff4d6d;
     margin-bottom: 30px;
-}
-
-.buttons {
-    position: relative;
-    height: 80px;
-}
-
-button {
-    padding: 12px 25px;
-    font-size: 18px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-#yesBtn {
-    background-color: #ff4d6d;
-    color: white;
-    margin-right: 20px;
-}
-
-#yesBtn:hover {
-    background-color: #e63950;
-}
-
-#noBtn {
-    background-color: #adb5bd;
-    color: white;
-    position: absolute;
-}
-
-#message {
-    margin-top: 30px;
-    font-size: 22px;
-    color: #ff4d6d;
-    font-weight: bold;
-
 }
 
 .hidden {
@@ -83,17 +47,36 @@ select {
     padding: 12px 25px;
     font-size: 16px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
-.travel-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.travelBtn:hover, #continueBtn:hover {
+#continueBtn:hover, .travelBtn:hover {
     background-color: #e63950;
+}
+
+.buttons button {
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+#yesBtn {
+    background-color: #ff4d6d;
+    color: white;
+}
+
+#yesBtn:hover {
+    background-color: #e63950;
+}
+
+#noBtn {
+    background-color: #adb5bd;
+    color: white;
+    position: relative;
 }
 
 #placeMessage, #travelMessage {
