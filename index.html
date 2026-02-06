@@ -8,18 +8,43 @@
 <body>
 
 <div class="container">
-    <h1>💖 Molkaaaa Will you be my Valentine? 💖</h1>
 
-    <div class="buttons">
-        <button id="yesBtn">Yes 💘</button>
-        <button id="noBtn">No 💔</button>
+    <!-- FORMULAIRE -->
+    <div id="formSection">
+        <h1>💞 Let’s start with a memory 💞</h1>
+
+        <form id="memoryForm">
+            <label>📅 When did we meet for the first time?</label>
+            <input type="date" id="meetDate" required>
+
+            <label>📍 Where did we meet?</label>
+            <select id="meetPlace" required>
+                <option value="">Choose a place</option>
+                <option value="Gammarth Lac">Gammarth Lac</option>
+                <option value="Ezzahra">Ezzahra</option>
+            </select>
+
+            <button type="submit">Continue 💖</button>
+        </form>
     </div>
 
-    <p id="message"></p>
+    <!-- VALENTINE QUESTION -->
+    <div id="valentineSection" class="hidden">
+        <h1>💖 Molkaa Will you be my Valentine? 💖</h1>
+
+        <div class="buttons">
+            <button id="yesBtn">Yes 💘</button>
+            <button id="noBtn">No 💔</button>
+        </div>
+
+        <p id="message"></p>
+    </div>
+
 </div>
 
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
