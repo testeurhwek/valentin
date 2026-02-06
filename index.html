@@ -9,28 +9,25 @@
 
 <div class="container">
 
-    <!-- FORMULAIRE -->
-    <div id="formSection">
-        <h1>💞 Let’s start with a memory 💞</h1>
+    <!-- ÉCRAN 1 : SÉLECTION -->
+    <div id="placeSection">
+        <h1>📍 Where did we meet?</h1>
 
-        <form id="memoryForm">
-            <label>📅 When did we meet for the first time?</label>
-            <input type="date" id="meetDate" required>
+        <select id="placeSelect">
+            <option value="">Choose a place</option>
+            <option value="gammarth">Gammarth</option>
+            <option value="lac">Lac</option>
+            <option value="ezzahra">Ezzahra</option>
+        </select>
 
-            <label>📍 Where did we meet?</label>
-            <select id="meetPlace" required>
-                <option value="">Choose a place</option>
-                <option value="Gammarth Lac">Gammarth Lac</option>
-                <option value="Ezzahra">Ezzahra</option>
-            </select>
+        <button id="continueBtn">Continue 💖</button>
 
-            <button type="submit">Continue 💖</button>
-        </form>
+        <p id="placeMessage"></p>
     </div>
 
-    <!-- VALENTINE QUESTION -->
+    <!-- ÉCRAN 2 : VALENTINE -->
     <div id="valentineSection" class="hidden">
-        <h1>💖 Molkaa Will you be my Valentine? 💖</h1>
+        <h1>💖 Will you be my Valentine? 💖</h1>
 
         <div class="buttons">
             <button id="yesBtn">Yes 💘</button>
@@ -45,6 +42,7 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
