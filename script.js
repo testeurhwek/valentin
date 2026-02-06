@@ -1,6 +1,7 @@
 // Sections
 const placeSection = document.getElementById("placeSection");
 const valentineSection = document.getElementById("valentineSection");
+const yaySection = document.getElementById("yaySection");
 const travelSection = document.getElementById("travelSection");
 const finalSection = document.getElementById("finalSection");
 
@@ -37,17 +38,16 @@ noBtn.addEventListener("mouseover", () => {
     noBtn.style.transform = `translate(${x}px, ${y}px)`;
 });
 
-// STEP 2 → STEP 3
-// STEP 2 → STEP 3 avec message spécial
+// STEP 2 → YAAAAY
 yesBtn.addEventListener("click", () => {
-    // Affiche le message romantique
-    message.textContent = "Yaaaay 💕 you are my Valentine!";
+    valentineSection.style.display = "none";
+    yaySection.style.display = "block";
 
-    // Petit délai pour laisser le message s'afficher avant de passer à l'écran du pays
+    // après 30 secondes → passer à l'écran du pays
     setTimeout(() => {
-        valentineSection.style.display = "none";
+        yaySection.style.display = "none";
         travelSection.style.display = "block";
-    }, 1500); // 1,5 secondes
+    }, 30000); // 30000ms = 30 secondes
 });
 
 // STEP 3 → STEP 4
