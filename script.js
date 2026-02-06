@@ -38,9 +38,16 @@ noBtn.addEventListener("mouseover", () => {
 });
 
 // STEP 2 → STEP 3
+// STEP 2 → STEP 3 avec message spécial
 yesBtn.addEventListener("click", () => {
-    valentineSection.style.display = "none";
-    travelSection.style.display = "block";
+    // Affiche le message romantique
+    message.textContent = "Yaaaay 💕 you are my Valentine!";
+
+    // Petit délai pour laisser le message s'afficher avant de passer à l'écran du pays
+    setTimeout(() => {
+        valentineSection.style.display = "none";
+        travelSection.style.display = "block";
+    }, 1500); // 1,5 secondes
 });
 
 // STEP 3 → STEP 4
@@ -53,5 +60,6 @@ travelButtons.forEach(btn => {
         }, 1000);
     });
 });
+
 
 
