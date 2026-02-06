@@ -61,4 +61,35 @@ button {
     font-size: 22px;
     color: #ff4d6d;
     font-weight: bold;
+
+}
+
+.hidden {
+    display: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #ff4d6d;
+    text-align: left;
+}
+
+input, select {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #ff4d6d;
+    color: white;
+    border-radius: 30px;
 }
