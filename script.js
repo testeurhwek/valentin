@@ -39,6 +39,7 @@ noBtn.addEventListener("mouseover", () => {
 });
 
 // STEP 2 → YAAAAY
+// STEP 2 → YAAAAY avec timer
 yesBtn.addEventListener("click", () => {
     // Cacher l'écran Valentine
     valentineSection.style.display = "none";
@@ -46,13 +47,23 @@ yesBtn.addEventListener("click", () => {
     // Afficher le message Yaaaay
     yaySection.style.display = "block";
 
-    // Après 5 secondes → passer automatiquement à l'écran du pays
-    setTimeout(() => {
-        yaySection.style.display = "none";
-        travelSection.style.display = "block";
-    }, 5000); // 5000ms = 5 secondes
-});
+    // Timer de 5 secondes
+    let timeLeft = 5; // secondes
+    const timerMessage = document.getElementById("timerMessage");
+    timerMessage.textContent = `⏳ Attendre ${timeLeft} secondes...`;
 
+    const countdown = setInterval(() => {
+        timeLeft--;
+        if(timeLeft > 0){
+            timerMessage.textContent = `⏳ Attendre ${timeLeft} secondes...`;
+        } else {
+            clearInterval(countdown);
+            // Passer à l'écran du choix du pays
+            yaySection.style.display = "none";
+            travelSection.style.display = "block";
+        }
+    }, 1000);
+});
 // STEP 3 → STEP 4
 travelButtons.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -63,6 +74,7 @@ travelButtons.forEach(btn => {
         }, 1000);
     });
 });
+
 
 
 
