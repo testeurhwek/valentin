@@ -47,7 +47,7 @@ yesBtn.addEventListener("click", () => {
     setTimeout(() => {
         yaySection.style.display = "none";
         travelSection.style.display = "block";
-    }, 30000); // 30000ms = 30 secondes
+    }, 5000); // 30000ms = 30 secondes
 });
 
 // STEP 3 → STEP 4
@@ -60,6 +60,7 @@ travelButtons.forEach(btn => {
         }, 1000);
     });
 });
+
 
 
 
