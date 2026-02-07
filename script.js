@@ -40,14 +40,17 @@ noBtn.addEventListener("mouseover", () => {
 
 // STEP 2 → YAAAAY
 yesBtn.addEventListener("click", () => {
+    // Cacher l'écran Valentine
     valentineSection.style.display = "none";
+
+    // Afficher le message Yaaaay
     yaySection.style.display = "block";
 
-    // après 30 secondes → passer à l'écran du pays
+    // Après 5 secondes → passer automatiquement à l'écran du pays
     setTimeout(() => {
         yaySection.style.display = "none";
         travelSection.style.display = "block";
-    }, 5000); // 30000ms = 30 secondes
+    }, 5000); // 5000ms = 5 secondes
 });
 
 // STEP 3 → STEP 4
@@ -60,6 +63,7 @@ travelButtons.forEach(btn => {
         }, 1000);
     });
 });
+
 
 
 
